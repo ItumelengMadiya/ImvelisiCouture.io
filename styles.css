@@ -59,12 +59,15 @@ nav ul li a:hover {
     position: relative;
     text-align: center;
     color: white;
-    background: url('zulu-beads.jpg') no-repeat center center/cover;
+    background: url('photos/zulu-beads.jpg') no-repeat center center;
+    background-size: cover; /* Ensure the background image covers the whole section */
+    background-position: center; /* Center the image */
     height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 20px;
+    background-color: #2f2f2f; /* Fallback color */
 }
 
 .hero-text {
@@ -349,5 +352,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
 
 
