@@ -59,7 +59,7 @@ nav ul li a:hover {
     position: relative;
     text-align: center;
     color: white;
-    background: url('zulu-beads.jpg') no-repeat center center;
+    background: url('photos/zulu-beads.jpg') no-repeat center center;
     background-size: cover; /* Ensure the background image covers the whole section */
     background-position: center; /* Center the image */
     height: 70vh;
@@ -133,11 +133,7 @@ main {
     flex-direction: column;
     align-items: center;
     margin: 0;
-}
-
-.product-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
 /* Image Styles */
@@ -151,23 +147,6 @@ main {
 /* Add Zoom Class */
 .zoom {
     cursor: zoom-in;
-}
-
-/* Button Styles */
-.product-item .btn {
-    background-color: #a0522d; /* Terra cotta button */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1em;
-    text-transform: uppercase;
-    margin-top: auto;
-    transition: background-color 0.3s ease;
-}
-
-.product-item .btn:hover {
-    background-color: #8b4513; /* Slightly darker shade */
 }
 
 /* Ensure Responsiveness */
@@ -251,39 +230,64 @@ main {
     }
 
     /* Cart Page Styles */
-    .cart table {
-        display: block;
+    .cart {
         overflow-x: auto;
-        white-space: nowrap;
     }
 
-    .cart table thead {
-        display: none; /* Hide table header on very small screens */
+    .cart table {
+        width: 100%;
+        border-collapse: collapse;
     }
 
-    .cart table tr {
-        display: block;
-        margin-bottom: 10px;
+    .cart table th, .cart table td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #8b4513; /* Terra cotta border */
+    }
+
+    .cart table th {
+        background-color: #40342a; /* Subtle background color */
     }
 
     .cart table td {
-        display: block;
-        text-align: right;
-        font-size: 0.9em;
-        padding-left: 50%;
-        position: relative;
-        border: none;
-        border-bottom: 1px solid #8b4513; /* Terra cotta border */
+        background-color: #2f2f2f; /* Darker background for table cells */
     }
 
-    .cart table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 45%;
-        padding-left: 10px;
-        font-weight: bold;
-        text-align: left;
+    @media (max-width: 480px) {
+        .cart table {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .cart table thead {
+            display: none; /* Hide table header on very small screens */
+        }
+
+        .cart table tr {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .cart table td {
+            display: block;
+            text-align: right;
+            font-size: 0.9em;
+            padding-left: 50%;
+            position: relative;
+            border: none;
+            border-bottom: 1px solid #8b4513; /* Terra cotta border */
+        }
+
+        .cart table td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 45%;
+            padding-left: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
     }
 }
 
@@ -352,6 +356,7 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
 
 
 
