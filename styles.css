@@ -8,8 +8,6 @@ body, h1, h2, p, ul {
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background-color: #2f2f2f; /* Darker, more subtle background color */
     color: #e3dcd2; /* Softer, warm text color */
 }
@@ -64,7 +62,7 @@ nav ul li a:hover {
     position: relative;
     text-align: center;
     color: white;
-    background: url('zulu-beads.jpg') no-repeat center center/cover;
+    background: url('photos/zulu-beads.jpg') no-repeat center center/cover;
     height: 70vh;
     display: flex;
     align-items: center;
@@ -143,7 +141,6 @@ main {
 }
 
 /* Image Styles */
-/* Product Item Image Styles */
 .product-item img {
     width: 100%;
     max-width: 100%;
@@ -151,13 +148,6 @@ main {
     border-radius: 10px;
     margin-bottom: 15px;
 }
-
-/* Responsive Hero Image */
-.hero {
-    background-size: cover;
-    background-position: center;
-}
-
 
 /* Add Zoom Class */
 .zoom {
@@ -244,25 +234,10 @@ main {
     box-sizing: border-box;
 }
 
-/* Responsive Button Sizes */
-@media (max-width: 480px) {
-    .contact form input, .contact form textarea {
-        font-size: 1em;
-        padding: 15px;
-    }
-
-    .contact form .btn {
-        font-size: 1.1em;
-        padding: 15px;
-    }
-}
-
-
 .contact form .btn:hover {
     background-color: #8b4513; /* Slightly darker shade */
 }
 
-/* Cart Page Styles */
 /* Cart Page Styles */
 .cart {
     max-width: 1000px;
@@ -390,23 +365,8 @@ footer a:hover {
     color: #a0522d; /* Terra cotta color on hover */
 }
 
-/* Responsive Design Adjustments */
-@media (max-width: 1024px) {
-    .product-item {
-        width: calc(50% - 15px);
-    }
-}
-
-@media (max-width: 768px) {
-    .product-item {
-        width: calc(50% - 15px);
-    }
-}
-
-@media (max-width: 480px) {
-    .product-item {
-        width: 100%;
-        box-sizing: border-box;
-    }
+/* Focus Styles for Accessibility */
+a:focus, button:focus {
+    outline: 2px solid #a0522d; /* Terra cotta outline */
 }
 
