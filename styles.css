@@ -59,7 +59,7 @@ nav ul li a:hover {
     position: relative;
     text-align: center;
     color: white;
-    background: url('photos/zulu-beads.jpg') no-repeat center center;
+    background: url('zulu-beads.jpg') no-repeat center center;
     background-size: cover; /* Ensure the background image covers the whole section */
     background-position: center; /* Center the image */
     height: 70vh;
