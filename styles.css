@@ -1,0 +1,412 @@
+/* General Reset and Base Styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2f2f2f; /* Darker, more subtle background color */
+    color: #e3dcd2; /* Softer, warm text color */
+}
+
+/* Header Styles */
+header {
+    background-color: #4a2e19; /* Rich, earthy tone */
+    color: #f5e6c8; /* Warm light text color */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #a0522d; /* Terra cotta border color */
+}
+
+header h1 {
+    margin-bottom: 15px;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #f5e6c8; /* Matching with header text */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    background-color: #a0522d; /* Terra cotta color */
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: url('photos/zulu-beads.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for readability */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.hero-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-text .btn {
+    background-color: #a0522d; /* Terra cotta color */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.hero-text .btn:hover {
+    background-color: #8b4513; /* Slightly darker shade */
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+    background-color: #40342a; /* Subtle background color */
+}
+
+/* Product Item Styles */
+.product-item {
+    background-color: #40342a; /* Matching with products section */
+    border: 1px solid #8b4513; /* Terra cotta border */
+    padding: 15px;
+    text-align: center;
+    width: calc(30% - 10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styles */
+/* Product Item Image Styles */
+.product-item img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Responsive Hero Image */
+.hero {
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Add Zoom Class */
+.zoom {
+    cursor: zoom-in;
+}
+
+/* Button Styles */
+.product-item .btn {
+    background-color: #a0522d; /* Terra cotta button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+}
+
+.product-item .btn:hover {
+    background-color: #8b4513; /* Slightly darker shade */
+}
+
+/* Ensure Responsiveness */
+@media (max-width: 1024px) {
+    .product-item {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-item {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Contact Form */
+.contact form {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #40342a; /* Subtle background color */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #f5e6c8; /* Matching form text color */
+}
+
+/* Contact Form */
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #8b4513; /* Terra cotta border */
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Contact Form Button */
+.contact form .btn {
+    background-color: #a0522d; /* Terra cotta button */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%; /* Full width for touch devices */
+    box-sizing: border-box;
+}
+
+/* Responsive Button Sizes */
+@media (max-width: 480px) {
+    .contact form input, .contact form textarea {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .contact form .btn {
+        font-size: 1.1em;
+        padding: 15px;
+    }
+}
+
+
+.contact form .btn:hover {
+    background-color: #8b4513; /* Slightly darker shade */
+}
+
+/* Cart Page Styles */
+/* Cart Page Styles */
+.cart {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #40342a; /* Subtle background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Allows horizontal scrolling */
+}
+
+.cart table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: #40342a; /* Matching cart table background */
+}
+
+.cart table, .cart table th, .cart table td {
+    border: 1px solid #8b4513; /* Terra cotta border */
+    color: #f5e6c8; /* Matching text color */
+}
+
+/* Stack table rows on very small screens */
+@media (max-width: 480px) {
+    .cart table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .cart table thead {
+        display: none; /* Hide table header on very small screens */
+    }
+
+    .cart table tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .cart table td {
+        display: block;
+        text-align: right;
+        font-size: 0.9em;
+        padding-left: 50%;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid #8b4513; /* Terra cotta border */
+    }
+
+    .cart table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* Blog Page Styles */
+.blog {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #40342a; /* Subtle background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post {
+    border: 1px solid #8b4513; /* Terra cotta border */
+    padding: 20px;
+    background-color: #40342a; /* Matching blog post background */
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #f5e6c8; /* Matching blog post title color */
+}
+
+.blog-post p {
+    font-size: 1.1em;
+    color: #e3dcd2; /* Softer paragraph text color */
+}
+
+.blog-post .read-more {
+    display: inline-block;
+    margin-top: 20px;
+    color: #a0522d; /* Terra cotta read more link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-post .read-more:hover {
+    color: #8b4513; /* Slightly darker shade on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4a2e19; /* Rich, earthy tone */
+    color: #f5e6c8; /* Warm light text color */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 5px solid #a0522d; /* Terra cotta border color */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+footer a {
+    color: #f5e6c8; /* Matching with footer text */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #a0522d; /* Terra cotta color on hover */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 1024px) {
+    .product-item {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-item {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+

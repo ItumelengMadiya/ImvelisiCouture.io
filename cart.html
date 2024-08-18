@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be dynamically added here by JavaScript -->
+                </tbody>
+            </table>
+            <div class="cart-summary">
+                <p>Total: R<span id="cart-total">0.00</span></p>
+                <a href="checkout.html" class="btn">Proceed to Checkout</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024  Imvelisi Couture.</p>
+    </footer>
+    <script>
+        // Sample data for cart items
+        const cartItems = [
+            { id: 1, name: 'Bapedi Traditional Outfit', price: 899.99, quantity: 1 },
+            { id: 2, name: 'Batswana Traditional Outfit', price: 1199.99, quantity: 2 },
+        ];
+
+        function renderCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalElement = document.getElementById('cart-total');
+            let cartTotal = 0;
+
+            // Clear the cart items container
+            cartItemsContainer.innerHTML = '';
+
+            // Render each cart item
+            cartItems.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                cartTotal += itemTotal;
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>R${item.price.toFixed(2)}</td>
+                    <td>${item.quantity}</td>
+                    <td>R${itemTotal.toFixed(2)}</td>
+                    <td><button class="btn remove-item" data-product-id="${item.id}">Remove</button></td>
+                `;
+                cartItemsContainer.appendChild(row);
+            });
+
+            // Update the cart total
+            cartTotalElement.textContent = cartTotal.toFixed(2);
+
+            // Attach event listeners to remove buttons
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', removeCartItem);
+            });
+        }
+
+        function removeCartItem(event) {
+            const productId = parseInt(event.target.getAttribute('data-product-id'), 10);
+            const itemIndex = cartItems.findIndex(item => item.id === productId);
+
+            if (itemIndex > -1) {
+                // Remove the item from the cart
+                cartItems.splice(itemIndex, 1);
+
+                // Re-render the cart
+                renderCart();
+            }
+        }
+
+        // Initial render of the cart
+        renderCart();
+    </script>
+</body>
+
+</html>
+
