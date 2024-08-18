@@ -16,17 +16,14 @@ body {
 header {
     background-color: #4a2e19; /* Rich, earthy tone */
     color: #f5e6c8; /* Warm light text color */
-    padding: 20px 0;
+    padding: 10px 0; /* Adjusted padding */
     text-align: center;
     border-bottom: 5px solid #a0522d; /* Terra cotta border color */
 }
 
 header h1 {
-    margin-bottom: 15px;
-    font-size: 2.5em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 2em; /* Adjusted font size for smaller screens */
+    margin-bottom: 10px;
 }
 
 nav ul {
@@ -38,7 +35,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 10px; /* Adjusted margin */
 }
 
 nav ul li a {
@@ -125,7 +122,7 @@ main {
     border: 1px solid #8b4513; /* Terra cotta border */
     padding: 15px;
     text-align: center;
-    width: calc(30% - 10px);
+    width: calc(33.333% - 15px); /* Adjusted width for three items per row */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 10px;
@@ -143,7 +140,6 @@ main {
 /* Image Styles */
 .product-item img {
     width: 100%;
-    max-width: 100%;
     height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -174,13 +170,25 @@ main {
 /* Ensure Responsiveness */
 @media (max-width: 1024px) {
     .product-item {
-        width: calc(50% - 15px);
+        width: calc(50% - 15px); /* Two items per row on medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .product-item {
-        width: calc(50% - 15px);
+        width: calc(50% - 15px); /* Two items per row on smaller screens */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Adjusted font size */
+    }
+
+    .hero-text h2 {
+        font-size: 2em; /* Adjusted font size */
+    }
+
+    .hero-text p {
+        font-size: 1em; /* Adjusted font size */
     }
 }
 
@@ -189,80 +197,57 @@ main {
         width: 100%;
         box-sizing: border-box;
     }
-}
 
-/* Contact Form */
-.contact form {
-    max-width: 600px;
-    margin: 40px auto;
-    background-color: #40342a; /* Subtle background color */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    .hero {
+        height: 50vh; /* Adjusted height */
+        padding: 0 10px; /* Adjusted padding */
+    }
 
-.contact form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #f5e6c8; /* Matching form text color */
-}
+    .hero-text {
+        padding: 20px; /* Adjusted padding */
+        max-width: 90%;
+    }
 
-/* Contact Form */
-.contact form input, .contact form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #8b4513; /* Terra cotta border */
-    border-radius: 5px;
-    font-size: 1em;
-    box-sizing: border-box;
-}
+    .hero-text h2 {
+        font-size: 1.5em; /* Adjusted font size */
+    }
 
-/* Contact Form Button */
-.contact form .btn {
-    background-color: #a0522d; /* Terra cotta button */
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    display: inline-block;
-    width: 100%; /* Full width for touch devices */
-    box-sizing: border-box;
-}
+    .hero-text p {
+        font-size: 0.9em; /* Adjusted font size */
+    }
 
-.contact form .btn:hover {
-    background-color: #8b4513; /* Slightly darker shade */
-}
+    header h1 {
+        font-size: 1.5em; /* Adjusted font size */
+    }
 
-/* Cart Page Styles */
-.cart {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #40342a; /* Subtle background color */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow-x: auto; /* Allows horizontal scrolling */
-}
+    nav ul {
+        flex-direction: column; /* Stack navigation items */
+        padding: 0;
+    }
 
-.cart table {
-    width: 100%;
-    margin-bottom: 20px;
-    border-collapse: collapse;
-    background-color: #40342a; /* Matching cart table background */
-}
+    nav ul li {
+        margin: 5px 0; /* Adjusted margin */
+    }
 
-.cart table, .cart table th, .cart table td {
-    border: 1px solid #8b4513; /* Terra cotta border */
-    color: #f5e6c8; /* Matching text color */
-}
+    .contact form .btn,
+    .product-item .btn {
+        font-size: 1em; /* Adjusted font size */
+        padding: 10px; /* Adjusted padding */
+    }
 
-/* Stack table rows on very small screens */
-@media (max-width: 480px) {
+    footer {
+        padding: 10px 0; /* Adjusted padding */
+    }
+
+    footer p {
+        font-size: 0.8em; /* Adjusted font size */
+    }
+
+    footer a {
+        font-size: 0.8em; /* Adjusted font size */
+    }
+
+    /* Cart Page Styles */
     .cart table {
         display: block;
         overflow-x: auto;
@@ -299,49 +284,50 @@ main {
     }
 }
 
-/* Blog Page Styles */
-.blog {
-    max-width: 1200px;
+/* Contact Form */
+.contact form {
+    max-width: 600px;
     margin: 40px auto;
-    padding: 20px;
     background-color: #40342a; /* Subtle background color */
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.blog-post {
-    border: 1px solid #8b4513; /* Terra cotta border */
-    padding: 20px;
-    background-color: #40342a; /* Matching blog post background */
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.blog-post h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    color: #f5e6c8; /* Matching blog post title color */
-}
-
-.blog-post p {
-    font-size: 1.1em;
-    color: #e3dcd2; /* Softer paragraph text color */
-}
-
-.blog-post .read-more {
-    display: inline-block;
-    margin-top: 20px;
-    color: #a0522d; /* Terra cotta read more link */
-    text-decoration: none;
+.contact form label {
+    display: block;
+    margin-bottom: 10px;
     font-weight: bold;
+    color: #f5e6c8; /* Matching form text color */
 }
 
-.blog-post .read-more:hover {
-    color: #8b4513; /* Slightly darker shade on hover */
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #8b4513; /* Terra cotta border */
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
 }
 
-/* Footer Styles */
+/* Contact Form Button */
+.contact form .btn {
+    background-color: #a0522d; /* Terra cotta button */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.contact form .btn:hover {
+    background-color: #8b4513; /* Slightly darker shade */
+}
+
+/* Footer */
 footer {
     background-color: #4a2e19; /* Rich, earthy tone */
     color: #f5e6c8; /* Warm light text color */
@@ -352,21 +338,16 @@ footer {
 
 footer p {
     margin: 0;
-    font-size: 1em;
+    font-size: 0.9em; /* Adjusted font size */
 }
 
 footer a {
-    color: #f5e6c8; /* Matching with footer text */
+    color: #f5e6c8; /* Matching text color */
     text-decoration: none;
-    font-weight: bold;
 }
 
 footer a:hover {
-    color: #a0522d; /* Terra cotta color on hover */
+    text-decoration: underline;
 }
 
-/* Focus Styles for Accessibility */
-a:focus, button:focus {
-    outline: 2px solid #a0522d; /* Terra cotta outline */
-}
 
